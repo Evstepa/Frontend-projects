@@ -1,0 +1,203 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.special {
+  &__container {
+    max-width: 1280px;
+    @media (max-width: 1280px) {
+      max-width: 1024px;
+      padding: 0 36px;
+    }
+    @media (max-width: 1024px) {
+      margin-bottom: 70px;
+    }
+    @media (max-width: 960px) {
+      padding: 0 72px;
+    }
+    @media (max-width: 640px) {
+      padding: 0 12px;
+    }
+  }
+  &__slider {
+    overflow-x: hidden;
+    width: 100%;
+    @media (max-width: 640px) {
+      padding-bottom: 16px;
+    }
+    & .swiper-slide {
+      width: 296px;
+      &:nth-child(2){
+        width: 624px;
+        @media (max-width: 1600px) {
+          width: 296px;
+        }
+      }
+      &:nth-child(5){
+        width: 624px;
+        @media (max-width: 1600px) {
+          width: 296px;
+        }
+      }
+      @media (max-width: 1280px) {
+        min-width: 296px;
+        width: 100%;
+
+      }
+    }
+  }
+  &__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 77px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1600px) {
+      right: 36px;
+    }
+    @media (max-width: 960px) {
+      right: 72px;
+    }
+    @media (max-width: 640px) {
+      position: initial;
+      margin: 0 auto;
+    }
+    &-btn {
+      position: relative !important;
+      top: 11px;
+      width: auto;
+      height: auto;
+      @include arrow-full-eff;
+      &::after {
+        content: '' !important;
+      }
+    }
+    & .swiper-button-prev {
+      left: 0;
+      & svg {
+        transform: rotate(0.5turn);
+      }
+    }
+    & .swiper-button-next {
+      right: 0;
+    }
+  }
+  &__card {
+    position: relative;
+    display: block;
+    min-width: 296px;
+    width: auto;
+    min-height: 511px;
+    border-radius: 10px;
+    background-color: $color-grey_light;
+    & .scard {
+        &__sale {
+          position: absolute;
+          left: 0;
+          top: 30px;
+          margin: 0;
+          padding: 7px;
+          width: 68px;
+          height: 20px;
+          @include font70016;
+          font-size: 14px;
+          line-height: 17px;
+          color: $color-white;
+          text-align: center;
+          background-color: $color-secondary;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid $color-secondary;
+            border-top: 17px solid transparent;
+            border-bottom: 17px solid transparent;
+          }
+        }
+        &__top {
+          position: relative;
+          width: 100%;
+          min-height: 282px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        &__img {
+          object-fit: none;
+          object-position: bottom;
+        }
+        &__bottom {
+          position: relative;
+          padding: 30px;
+          padding-top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          // min-height: 250px;
+        }
+        &__contant {
+          padding-top: 16px;
+          padding-bottom: 23px;
+        }
+        &__title {
+          margin: 0;
+          margin-bottom: 17px;
+          padding: 0;
+          @include font40024;
+          color: $color-text-black;
+        }
+        &__price {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: flex-start;
+          @include font40016;
+          font-size: 18px;
+          line-height: 130%;
+          &-new {
+            margin-right: 30px;
+            color: $color-secondary;
+          }
+          &-old {
+            color: $color-grey;
+            text-decoration-line: line-through;
+          }
+        }
+        &__btn {
+          @include btn-empty-style;
+        }
+    }
+  }
+}
+
+.scard__wide {
+  min-width: 624px;
+  width: auto;
+  @media (max-width: 1600px) {
+    min-width: 296px;
+  }
+  & .scard__bottom-bg2::before {
+    @include bg_img-wide;
+    background-image: url('../img/special/pic02_dop.svg');
+    @media (max-width: 1600px) {
+      background: none;
+    }
+  }
+  & .scard__bottom-bg5::before {
+    @include bg_img-wide;
+    background-image: url('../img/special/pic05_dop.svg');
+    @media (max-width: 1600px) {
+      background: none;
+    }
+  }
+}

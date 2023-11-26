@@ -1,0 +1,161 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.high-rating {
+  &__container {
+    max-width: 1280px;
+    @media (max-width: 1280px) {
+      max-width: 1024px;
+      padding: 0 36px;
+    }
+    @media (max-width: 960px) {
+      padding: 0 72px;
+    }
+    @media (max-width: 640px) {
+      padding: 0 12px;
+    }
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // width: 296px;
+    min-height: 420px;
+    border-radius: 10px;
+    background-color: $color-grey_light;
+    @media (max-width: 640px) {
+      // min-width: 140px;
+      width: auto;
+      min-height: 278px;
+      gap: 8px;
+    }
+      & .hcard {
+        &__star {
+          position: absolute;
+          left: 28px;
+          top: 30px;
+          margin: 0;
+          padding-left: 25px;
+          @include font40016;
+          color: $color-secondary;
+          background-image: url('../img/high-rating/star.svg');
+          @include bg_img;
+          @media (max-width: 1024px) {
+            left: 28px;
+            top: 31px;
+            padding-left: 25px;
+          }
+          @media (max-width: 640px) {
+            left: 14px;
+            top: 16px;
+            padding-left: 20px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+          }
+        }
+        &__top {
+          position: relative;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          min-height: 82px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          @media (max-width: 700px) {
+            min-height: 33px;
+          }
+        }
+        &__img {
+          object-fit: cover;
+          object-position: bottom;
+        }
+        &__bottom {
+          position: relative;
+          padding: 15px 29px 30px 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          @media (max-width: 640px) {
+            padding: 16px;
+          }
+        }
+        &__contant {
+          padding-bottom: 24px;
+          @media (max-width: 700px) {
+            padding: 0;
+            padding-bottom: 16px;
+          }
+        }
+        &__title {
+          margin: 0;
+          margin-bottom: 20px;
+          padding: 0;
+          @include font40024;
+          color: $color-text-black;
+          @media (max-width: 640px) {
+            margin-bottom: 13px;
+            @include font40016;
+            line-height: 130%;
+          }
+          &-1 {
+            margin-bottom: 20px;
+          }
+        }
+        &__price {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: flex-start;
+          @include font40016;
+          line-height: 130%;
+          color: $color-grey_shade;
+        }
+        &__btn {
+          @include btn-empty-style;
+          @media (max-width: 640px) {
+            padding: 10px 23px;
+          }
+        }
+    }
+  }
+  &__grid {
+    max-width: 1280px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: stretch;
+
+    @media (max-width: 1600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 996px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 700px) {
+      gap: 16px;
+    }
+  }
+  &__btn {
+    justify-content: center;
+    &-more {
+      margin-top: 32px;
+      @include btn-style;
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+}
+.item {
+  &-unvisible {
+    display: none;
+  }
+  &-visible {
+    display: block;
+  }
+}
+

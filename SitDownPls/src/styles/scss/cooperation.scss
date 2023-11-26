@@ -1,0 +1,180 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.cooperation {
+  margin-top: -10px;
+  @media (max-width: 1280px) {
+    margin-top: -5px;
+  }
+  @media (max-width: 640px) {
+    margin-top: 0;
+  }
+  &__container {
+    font-family: 'Open Sans';
+    margin-bottom: 46px;
+    @media (max-width: 1280px) {
+      max-width: 952px;
+    }
+    @media (max-width: 960px) {
+      padding: 0 72px;
+    }
+    @media (max-width: 640px) {
+      margin-bottom: 44px;
+      padding: 0;
+      max-width: 296px;
+    }
+  }
+  &__contant {
+    max-width: 843px;
+    @media (max-width: 960px) {
+      max-width: 624px;
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    &-2 {
+      margin-bottom: 12px;
+      @include font40024;
+      @media (max-width: 960px) {
+        margin-bottom: 13px;
+      }
+      @media (max-width: 640px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  &__get {
+    margin-bottom: 32px;
+  }
+  &__suppliers {
+    margin-bottom: 32px;
+    @media (max-width: 960px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__advantages {
+    margin-bottom: 32px;
+    &__subtitle {
+      @include font60016;
+      line-height: 22px;
+      color: $color-secondary;
+    }
+  }
+  &__warranty {
+    margin-bottom: 32px;
+  }
+  &__term {
+    margin-bottom: 32px;
+  }
+}
+.suppliers {
+  &__descr {
+    line-height: 29px;
+    color: $color-grey_shade;
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: 180%;
+    }
+  }
+}
+.get {
+  max-width: 624px;
+  &__item {
+    margin-bottom: 12px;
+    padding-left: 37px;
+    line-height: 150%;
+    color: $color-grey_shade;
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &-1 {
+      background: url('../img/cooperation/pic_get_1.svg') no-repeat 0 0px; /* Параметры фона */
+    }
+    &-2 {
+      background: url('../img/cooperation/pic_get_2.svg') no-repeat 0 0px; /* Параметры фона */
+    }
+    &-3 {
+      background: url('../img/cooperation/pic_get_3.svg') no-repeat 0 0px; /* Параметры фона */
+    }
+  }
+}
+.advantages {
+  &__title {
+    @media (max-width: 640px) {
+      margin-bottom: 11px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 12px;
+    @include font60016;
+    line-height: 22px;
+    color: $color-secondary;
+  }
+  &__descr {
+    margin-bottom: 12px;
+    line-height: 29px;
+    @media (max-width: 640px) {
+      margin-bottom: 11px;
+      font-size: 14px;
+      line-height: 179%;
+      &:last-child {
+        line-height: 178%;
+      }
+    }
+  }
+}
+.warranty {
+  &__list {
+    padding-left: 18px;
+    @media (max-width: 960px) {
+      padding-left: 14px;
+    }
+  }
+  &__item {
+    padding-left: 12px;
+    color: $color-secondary;
+    line-height: 29px;
+    @media (max-width: 960px) {
+      padding-left: 8px;
+    }
+    @media (max-width: 640px) {
+      max-width: 279px;
+      font-size: 14px;
+      line-height: 180%;
+    }
+    & span {
+      color: $color-grey_shade;
+    }
+    &:not(:last-child) {
+      margin-bottom: 14px;
+      @media (max-width: 640px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.term {
+  padding: 22px 0 22px 109px;
+  @media (max-width: 640px) {
+    padding: 0 0 1px 52px;
+  }
+  &-bg {
+    background: url('../img/cooperation/term.svg') no-repeat;
+    @media (max-width: 640px) {
+      background: url('../img/cooperation/term-small.svg') no-repeat;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 140%;
+    @media (max-width: 640px) {
+      @include font40016;
+      line-height: 143%;
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.header__breadcrumb {
+  margin-bottom: 42px;
+  @media (max-width: 1200px) {
+    margin-bottom: 36px;
+  }
+}
+.breadcrumb {
+  display: flex;
+  gap: 6px;
+  // margin-bottom: 32px;
+  @media (max-width: 960px) {
+    margin-left: 8px;
+  }
+  &__item {
+    @include font40014;
+    color: $color-grey;
+    &:not(:first-child)::before {
+      content: "/\00a0";
+      padding: 1px;
+      color: $color-grey;
+    }
+    &:last-child {
+      color: $color-primary_shade;
+    }
+  }
+  @media (max-width: 640px) {
+    display: none;
+  }
+}

@@ -1,0 +1,118 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.useful {
+  &__container {
+    max-width: 1280px;
+  @media (max-width: 1280px) {
+    max-width: 1024px;
+    padding: 0 36px;
+  }
+  @media (max-width: 960px) {
+    padding: 0 72px;
+  }
+  @media (max-width: 640px) {
+    margin-bottom: 65px;
+    padding: 0 12px 48px 12px;
+  }
+  }
+  &__card {
+    display: block;
+    min-width: 624px;
+    width: 100%;
+    min-height: 676px;
+    border-radius: 10px;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      min-height: 426px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      @media (max-width: 1600px) {
+        min-height: 202px;
+      }
+    }
+    @media (max-width: 1600px) {
+      min-width: 296px;
+      min-height: 456px;
+    }
+  }
+  &__slider {
+    @include slider;
+  }
+}
+
+.ucard {
+  background-color: $color-grey_light;
+  &__bg1 {
+    &::before {
+      content: '';
+      background-image: url('../img/useful/pic1_1920.jpg');
+      @media (max-width: 1600px) {
+        background-image: url('../img/useful/pic1_1024.jpg');
+      }
+    }
+  }
+  &__bg2 {
+    &::before {
+      content: '';
+      background-image: url('../img/useful/pic2_1920.jpg');
+      @media (max-width: 1600px) {
+        background-image: url('../img/useful/pic2_1024.jpg');
+      }
+    }
+  }
+  &__bg3 {
+    &::before {
+      content: '';
+      background-image: url('../img/useful/pic3_1920.jpg');
+      @media (max-width: 1600px) {
+        background-image: url('../img/useful/pic3_1024.jpg');
+      }
+    }
+  }
+  &__bg4 {
+    &::before {
+      content: '';
+      background-image: url('../img/useful/pic4_1920.jpg');
+      @media (max-width: 1600px) {
+        background-image: url('../img/useful/pic4_1024.jpg');
+      }
+    }
+  }
+  &__bg5 {
+    &::before {
+      content: '';
+      background-image: url('../img/useful/pic5_1920.jpg');
+      @media (max-width: 1600px) {
+        background-image: url('../img/useful/pic5_1024.jpg');
+      }
+    }
+  }
+  &__contant {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 250px;
+    @media (max-width: 1600px) {
+      padding-bottom: 25px;
+    }
+  }
+  &__descr {
+    @include font40024;
+    color: $color-text-black;
+    @media (max-width: 1600px) {
+      @include font40016;
+      line-height: 22px;
+    }
+  }
+  &__btn {
+    @include btn-empty-style;
+  }
+}

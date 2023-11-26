@@ -1,0 +1,437 @@
+@import '_variables';
+
+@mixin font90060 {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 120%;
+  color: $color-gold;
+}
+@mixin font70048 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+}
+@mixin font70016 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}
+@mixin font60016 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+@mixin font40048 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+}
+@mixin font40032 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+@mixin font40024 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+}
+@mixin font40016 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
+@mixin font40014 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+@mixin font40012 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+@mixin font4009 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 14px;
+}
+@mixin bg_img {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin bg_img-wide {
+  content: '';
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 100%;
+  height: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 37%;
+}
+@mixin subnav-full-eff {
+  padding: 0 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &:focus {
+    color: $color-primary_shade;
+    background-color: $color-pink_violet;
+  };
+  &:hover {
+    color: $color-primary;
+    background-color: transparent;
+  };
+  &:active {
+    color: $color-primary_shade;
+    background-color: transparent;
+  };
+}
+@mixin nav-full-eff {
+  padding: 0 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &:focus {
+    color: $color-text-black;
+    background-color: $color-pink_violet;
+  };
+  &:hover {
+    color: $color-primary;
+    background-color: transparent;
+  };
+  &:active {
+    color: $color-primary_shade;
+    background-color: transparent;
+  };
+}
+@mixin tel-full-eff {
+  // cursor: pointer;
+  color: $color-secondary;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &:focus {
+    color: $color-secondary;
+    background-color: $color-bone;
+  };
+  &:hover {
+    color: $color-secondary_light;
+    background-color: transparent;
+  };
+  &:active {
+    color: $color-secondary_shade;
+    background-color: transparent;
+  };
+
+}
+@mixin arrow-full-eff {
+  & svg circle {
+    fill: none;
+    stroke: $color-primary;
+    transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+  }
+  &:focus svg circle {
+    fill: $color-primary;
+    stroke: $color-primary;
+  };
+  &:hover svg circle {
+    fill: $color-primary_light;
+    stroke: $color-primary;
+  };
+  &:active svg circle {
+    fill: $color-primary_shade;
+    stroke: $color-primary_shade;
+  };
+  & :disabled svg circle {
+    fill: none;
+    stroke: $color-grey;
+  }
+
+  & svg path {//??? стрелка не работает!!!
+    stroke: $color-primary;
+    transition: stroke 0.3s ease-in-out;
+  }
+  &:focus svg path {
+    stroke: $color-white;
+  };
+  &:hover svg path {
+    stroke: $color-white;
+  };
+  &:active svg path {
+    stroke: $color-white;
+  };
+  & :disabled svg path {
+    stroke: $color-grey;
+  }
+}
+@mixin link-full-eff {
+  & span {
+    &:focus,
+    &:hover {
+      color: $color-primary;
+    };
+    &:active {
+      color: $color-primary_shade;
+    };
+    &:focus::after,
+    &:hover::after {
+      border-bottom: 2px solid $color-primary;
+    };
+    &:active::after {
+      border-bottom: 2px solid $color-primary_shade;
+    };
+  }
+}
+@mixin social-full-eff {
+  & svg path {
+    fill: $color-grey;
+    transition: fill 0.3s ease-in-out;
+  }
+  &:focus svg path {
+    fill: $color-md_grey;
+  };
+  &:hover svg path {
+    fill: $color-primary;
+  };
+  &:active svg path {
+    fill: $color-primary_shade;
+  };
+
+  & svg rect {
+    fill: none;
+    transition: fill 0.3s ease-in-out;
+  }
+  &:focus svg rect {
+    fill: $color-primary_light;
+  };
+  &:hover svg rect {
+    fill: none;
+  };
+  &:active svg rect {
+    fill: none;
+  };
+}
+@mixin user-full-eff {
+  & {
+    padding: 4px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+  &:focus {
+    background-color: $color-primary_light;
+  };
+  &:hover {
+    background-color: transparent;
+  };
+  &:active {
+    background-color: transparent;
+  };
+
+  & svg path:first-child {
+    fill: $color-primary;
+    transition: fill 0.3s ease-in-out;
+  }
+  &:focus svg path:first-child {
+    fill: $color-white;
+  };
+  &:hover svg path:first-child {
+    fill: $color-primary_light;
+  };
+  &:active svg path:first-child {
+    fill: $color-primary_shade;
+  };
+}
+@mixin btn-style {
+  padding: 21px 48px;
+  @include font70016;
+  color: $color-white;
+  background-color: $color-primary;
+  border-radius: 10px;
+  border: 2px solid $color-primary;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:focus {
+    color: $color-white;
+    border: 2px solid $color-primary_light;
+    background-color: $color-primary_light;
+  }
+  &:hover {
+    color: $color-white;
+    border: 2px solid $color-primary_shade;
+    background-color: $color-primary_light;
+  }
+  &:active {
+    color: $color-white;
+    border: 2px solid $color-primary_shade;
+    background-color: $color-primary_shade;
+  }
+  &:disabled {
+    color: $color-grey;
+    border: 2px solid $color-md_grey;
+    background-color: $color-md_grey;
+  }
+}
+@mixin btn-empty-style {
+  padding: 17px 33px;
+  @include font60016;
+  color: $color-primary;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid $color-primary;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:focus {
+    color: $color-white;
+    border: 2px solid $color-primary;
+    background-color: $color-primary_light;
+  }
+  &:hover {
+    color: $color-white;
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+  }
+  &:active {
+    color: $color-white;
+    border: 2px solid $color-primary_shade;
+    background-color: $color-primary_shade;
+  }
+}
+@mixin grid {
+  &__grid {
+    // max-width: 1280px;
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-items: left;
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (max-width: 640px) {
+      column-gap: 16px;
+      grid-template-rows: repeat(5, auto);
+    }
+  }
+}
+@mixin input-full-eff {
+  &:focus {
+    background-color: $color-bg-grey;
+    border: 1px solid $color-primary;
+  }
+  &:hover {
+    background-color: $color-md_grey;
+    border: none;
+  }
+  // &:active {
+  //   background-color: $color-bg-grey;
+  //   border: 1px solid $color-green_input;
+  // }
+  // &:valid {
+  //   background-color: $color-bg-grey;
+  //   border: 1px solid $color-green_input;
+  // }
+}
+@mixin slider {
+  & .itc-slider__items {
+    gap: $gap-useful;
+    align-items: flex-start;
+  }
+  & .itc-slider__item {
+    flex: 0 0 calc(50% - $gap-useful / 2);
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    @media (max-width: 1600px) {
+      flex: 0 0 calc(33% - $gap-useful * 2 / 3);
+      max-width: 33%;
+    }
+    @media (max-width: 1020px) {
+      flex: 0 0 calc(50% - $gap-useful / 2);
+      max-width: 50%;
+    }
+    @media (max-width: 700px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  & .arrow-block {
+    position: absolute;
+    top: -58px;
+    left: auto;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    min-width: 77px;
+    min-height: 32px;
+    @media (max-width: 1600px) {
+      // right: 13px;
+    }
+    @media (max-width: 640px) {
+      top: 104%;
+      right: 40%;
+      left: 37%;
+    }
+  }
+  & .itc-slider__btn {
+    position: initial;
+    display: block;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translateY(-75%);
+    @include arrow-full-eff;
+    &:before {
+      background: none;
+    }
+  }
+  & .itc-slider__btn_hide {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+    & svg {
+      & circle {
+        fill: none;
+        stroke: $color-grey;
+      }
+      & path {
+        stroke: $color-grey;
+      }
+    }
+  }
+  & .itc-slider__btn_prev svg {
+    transform: rotate(0.5turn);
+  }
+  // & .itc-slider__btn_next {
+  // }
+}

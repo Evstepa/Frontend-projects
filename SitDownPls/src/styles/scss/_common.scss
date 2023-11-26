@@ -1,0 +1,134 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 0;
+  background: #FFFFFF;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: none;
+  border: none;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  line-height: 1;
+}
+img {
+  max-width: 100%;
+}
+
+.btn {
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 26px;
+  @include font40032;
+  color: $color-text-black;
+  @media (max-width: 700px) {
+    @include font40024;
+    line-height: 24px;
+  }
+}
+
+.descr {
+  margin: 0;
+  max-width: 1080px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local(''),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local(''),
+    url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+    url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local(''),
+    url('../fonts/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: local(''),
+    url('../fonts/PlayfairDisplay-Black.woff') format('woff'),
+    url('../fonts/PlayfairDisplay-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@import '_reset.scss';
+
+.container {
+  // outline: 1px solid red;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 0;
+  max-width: 1280px;
+  @media (max-width: 1280px) {
+    max-width: 1024px;
+  }
+  @media (max-width: 1024px) {
+    max-width: 960px;
+  }
+  @media (max-width: 960px) {
+    max-width: 640px;
+  }
+  @media (max-width: 640px) {
+    max-width: 320px;
+    margin-bottom: 68px;
+  }
+}
+
+.bg {
+  background-color: $color-grey_light;
+}
+
+.grid {
+  grid-auto-flow: row;
+  &__item {
+    padding: 13px 0;
+    @media (max-width: 1024px) {
+      padding: 5px 0;
+    }
+    @media (max-width: 960px) {
+      padding: 17px 0;
+    }
+    @media (max-width: 640px) {
+      padding: 12px 0;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
